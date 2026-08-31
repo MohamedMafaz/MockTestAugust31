@@ -1,0 +1,73 @@
+API Endpoint: /api/meters/{meterId}/consumption
+
+Methods:
+- GET: Retrieve power consumption of a one smart meter.
+- POST: Create new consumption log
+- PUT: Update an existing consumption log
+- DELETE: Delete an consumption log
+
+Request Parameters:
+- GET:
+  - meterId (int, required)
+  - id (int optional) to get the single log record
+- POST/PUT:
+	- meterId (int, required)
+	- units (Decimal, required)
+	- TransactionTypeId (int, required)
+- DELETE:
+  - meterId (int, required)
+  - id (int optional) to delete the single log record
+
+Response Data (JSON):
+- GET (all consumptions):
+[
+	{
+		"id": 1,
+		"units":190.90,
+		"transactionTypeId":1,
+		"meterId":1
+	},
+	{
+		"id": 1,
+		"units":190.90,
+		"transactionTypeId":1,
+		"meterId":1
+	}
+]
+
+- GET (single consumption), POST, PUT:
+	{
+		"id": 1,
+		"units":190.90,
+		"transactionTypeId":1,
+		"meterId":1
+	}
+
+- DELETE
+
+{
+  "message": "Consumption record deleted successfully."
+}
+
+
+Success Codes:
+GET:
+200 OK
+
+POST:
+201 Created, 200 OK
+
+DELETE:
+200 OK
+
+Authorization: Bearer <token>
+Content-Type: application/json
+Accept: application/json
+
+
+
+Error Handling:
+- 400 Bad Request: Invalid input parameters or data types
+- 404 Not Found: Consumption not found (for GET, PUT, DELETE with specific ID)
+- 409 Conflict: Already an record for this meter on that timestamp created
+- 500 Internal Server Error: Unexpected server error
