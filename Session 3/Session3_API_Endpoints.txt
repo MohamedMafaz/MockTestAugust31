@@ -1,0 +1,363 @@
+Session 3 API Documentation:
+--------------------------------
+All Endpoints requires authorization with the JWT Bearer Token except the login endpoint
+--------------------------------
+
+1. Login
+
+POST api/auth/login
+
+Description:
+User will be marked as inactive after 5 consecutive failed attempts
+
+Path Parameters:
+N/A
+
+Query Paramters:
+N/A
+
+Request body:
+{
+  "username": "another",
+  "password": "1234"
+}
+
+Response Body:
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhbm90aGVyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiT3BlcmF0b3IiLCJleHAiOjE3ODgyNjcyMTJ9.-A-g05Qw_QO0iXatfIbwNu5JQ3oVi1De5PFgc0Jif74
+
+Error:
+401 Unauthorized (If there is no such user with the username or user is not active or invalid credentials)
+
+---------------------------------
+
+2. Get All Meters
+
+GET api/meters
+
+Query Parameters:
+page (int, required)
+pageSize (int required)
+facilityId (int, required)
+isActive (bool, required)
+
+Path Parameters:
+N/A
+
+Request Body:
+N/A
+
+Response body:
+200 OK
+
+[
+    {
+        "meterId": 1001,
+        "meterSerialNumber": "EM-NORTH-001",
+        "facilityId": 1,
+        "locationZone": "North Zone",
+        "maxVoltageCapacity": 480,
+        "baseTariffRate": 0.125,
+        "installationDate": "2022-01-15",
+        "isActive": true,
+        "isIndustrial": true,
+        "description": "Main entrance transformer meter"
+    }
+]
+
+
+If there is no content (higher page number):
+[]
+
+
+Error Codes:
+400 Bad Request (invalid Input)
+401 Unauthorized - If the user didn't passed the valid JWT token
+
+------------------------------------
+
+3. Get Single Meter
+
+GET api/meters/{id}
+
+Path parameter:
+id (int, required)
+
+Query Parameter:
+N/A
+
+Request Body:
+N/A
+
+Response Body:
+200 OK
+
+{
+    "meterId": 1001,
+    "meterSerialNumber": "EM-NORTH-001",
+    "facilityId": 1,
+    "locationZone": "North Zone",
+    "maxVoltageCapacity": 480,
+    "baseTariffRate": 0.125,
+    "installationDate": "2022-01-15",
+    "isActive": true,
+    "isIndustrial": true,
+    "description": "Main entrance transformer meter"
+}
+
+Error:
+404 - No meter found with the given id
+401 Unauthorized - If the user didn't passed the valid JWT token
+
+------------------------------------
+
+4. Create a Energy Meter
+
+POST api/meters
+
+Request Body:
+{
+  "meterSerialNumber": "string",
+  "facilityId": 1,
+  "locationZone": "string",
+  "maxVoltageCapacity": 0,
+  "baseTariffRate": 0,
+  "installationDate": "2026-09-01",
+  "isActive": true,
+  "isIndustrial": true,
+  "description": "string"
+}
+
+Query Parameter:
+N/A
+
+Path Parameter:
+N/A
+
+Response:
+201 Created
+
+Error Handling:
+409 Conflict - If there is already a meter with the same serial number
+400 BadRequest - If voltage is less than 0
+403 Forbidden - If the user is not the Admin
+401 Unauthorized - If the user didn't passed the valid JWT token
+
+-----------------------------------------
+
+5. Update an Energy Meter
+
+PUT api/meters/{id}
+
+Path parameters: 
+id (int, required)
+
+Request body:
+{
+"meterId":1014,
+  "meterSerialNumber": "strings",
+  "facilityId": 1,
+  "locationZone": "string",
+  "maxVoltageCapacity": 0,
+  "baseTariffRate": 0,
+  "installationDate": "2026-09-01",
+  "isActive": true,
+  "isIndustrial": true,
+  "description": "string"
+}
+
+Query Parameter:
+N/A
+
+Response:
+200 OK
+
+Error Handling:
+404 Not Found - If there is no energy meter on the given id
+400 Bad Request - If the id mismatch on path parameter and the request body
+403 Forbidden - If the user is not the admin
+401 Unauthorized - If the user didn't passed the valid JWT token
+
+--------------------------------------------
+
+6. Delete an energy meter
+
+DELETE api/meters/{id}
+
+Path Parameters:
+id (int, required)
+
+Query Parameter:
+N/A
+
+Request Body:
+N/A
+
+
+Response:
+200 OK - Soft deletes the meter (making it inactive)
+
+Error handling:
+404 Not Found - If there is no energy meter with the given id
+409 Conflict - If there is an already in a pending status for that energy meter
+403 Forbidden - If the user is not the admin
+401 Unauthorized - If the user didn't passed the valid JWT token
+
+----------------------------------------------
+
+7. Get Fecilities
+
+GET api/facilities
+
+Request body: 
+N/A
+
+Path Parameters:
+N/A
+
+Query Parameters:
+N/A
+
+Response:
+200 OK
+
+[
+    {
+        "facilityId": 1,
+        "facilityName": "Apex Logistics Center",
+        "locationZone": "North Zone",
+        "contactEmail": "ops@apexlogistics.com",
+        "gridRegion": "Grid-North-01",
+        "maxCapacityKw": 1500,
+        "isActive": true,
+        "alerts": [],
+        "energyMeters": []
+    },
+    {
+        "facilityId": 2,
+        "facilityName": "Metro General Hospital",
+        "locationZone": "Central Zone",
+        "contactEmail": "facilities@metrohospital.org",
+        "gridRegion": "Grid-Central-02",
+        "maxCapacityKw": 5000,
+        "isActive": true,
+        "alerts": [],
+        "energyMeters": []
+    }
+]
+
+Error Handling:
+401 Unauthorized
+
+--------------------------------------------------
+
+8. Create a Log Record
+
+POST api/logs
+
+Request Body: 
+{
+  "meterId": 1001,
+  "timestamp": "2026-09-01T09:16:10.389Z",
+  "voltage": 0,
+  "currentAmps": 0,
+  "powerKw": 0,
+  "peakHour": true
+}
+
+Query Parameter:
+N/A
+
+Path Parameter:
+N/A
+
+Response: 
+201 Created
+
+Error Handling:
+422 Unprocessable Entity - If the timestamp is in the future
+400 Bad Request - If the power is a negative value
+401 Unauthorized - If the user didn't passed the valid JWT token
+
+--------------------------------------------------
+
+9. Get all alerts
+
+GET api/alerts
+
+Query Parameters:
+severity - string (low, medium, critical) - case insensitive
+
+Path Parameter:
+N/A
+
+Request Body:
+N/A
+
+Response:
+200 OK:
+[
+    {
+        "alertId": 5001,
+        "facilityId": 1,
+        "meterId": 1001,
+        "eventTimestamp": "2026-09-01T11:23:41.18",
+        "surgeReadingKw": 10,
+        "thresholdLimitKw": 90,
+        "severity": "Low",
+        "status": "Resolved",
+        "notes": "",
+        "facility": null,
+        "meter": null
+    },
+    {
+        "alertId": 5002,
+        "facilityId": 2,
+        "meterId": 1001,
+        "eventTimestamp": "2026-09-01T11:23:41.217",
+        "surgeReadingKw": 10,
+        "thresholdLimitKw": 90,
+        "severity": "Low",
+        "status": "Dismissed",
+        "notes": "",
+        "facility": null,
+        "meter": null
+    }
+]
+
+
+Error Handling:
+400 Bad Request - If the severity is not in low, medium or critical
+401 Unauthorized - If the user didn't passed the valid JWT token
+
+---------------------------------------------------------
+
+
+10. Update the status of the alert
+
+PUT api/alerts/{id}/status
+
+Path Parameter: 
+id (int, required)
+
+Query Parameter:
+status (string, required)
+
+Request Body:
+N/A
+
+Response:
+200 OK
+
+Error Handling:
+400 Bad Request - If the user is trying to change from dismissed to pending without being an admin (or) if the status is invalid
+404 Not Found - If there is no alert with the given id
+401 Unauthorized - If the user didn't passed the valid JWT token
+
+----------------------------------------------------------
+
+
+
+
+
+
+

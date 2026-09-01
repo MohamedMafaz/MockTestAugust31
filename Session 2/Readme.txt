@@ -16,6 +16,6 @@ Deliverables:
 	- .exe
 
 3. NUnit Testing
-	- C:\Users\prmaf\Desktop\31 Mock Test\Session 2\EnergyGridTesting\EnergyGridTesting.slnx
-	- .slnx
+	- Session 2\Session2_AdminDesktopApp.zip
+	- .zip
 
