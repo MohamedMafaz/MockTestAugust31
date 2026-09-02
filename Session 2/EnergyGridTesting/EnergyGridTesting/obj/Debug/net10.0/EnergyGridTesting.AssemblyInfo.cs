@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EnergyGridTesting")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f840e580a80d194b4e1ed2b80e22a38777ae5fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bfa97e0c7181599fe1a981d09ae3d247503d5610")]
 [assembly: System.Reflection.AssemblyProductAttribute("EnergyGridTesting")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EnergyGridTesting")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

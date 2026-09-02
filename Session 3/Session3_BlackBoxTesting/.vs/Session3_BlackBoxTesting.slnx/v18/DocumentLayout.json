@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\Session3_BlackBoxTesting\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6E04985B-1647-44EA-B13B-FB4F0BAB7D11}|Session3_BlackBoxTesting\\Session3_BlackBoxTesting.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 3\\session3_blackboxtesting\\session3_blackboxtesting\\meterapiblackboxtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E04985B-1647-44EA-B13B-FB4F0BAB7D11}|Session3_BlackBoxTesting\\Session3_BlackBoxTesting.csproj|solutionrelative:session3_blackboxtesting\\meterapiblackboxtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A28C33E7-E8BD-AE11-ECA1-F43623C85808}|Session3_BlackBoxTesting\\Session3_BlackBoxTesting.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 3\\session3_blackboxtesting\\session3_blackboxtesting\\meterapiblackboxtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28C33E7-E8BD-AE11-ECA1-F43623C85808}|Session3_BlackBoxTesting\\Session3_BlackBoxTesting.csproj|solutionrelative:session3_blackboxtesting\\meterapiblackboxtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,7 +24,7 @@
               "RelativeDocumentMoniker": "Session3_BlackBoxTesting\\MeterApiBlackBoxTests.cs",
               "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\Session3_BlackBoxTesting\\Session3_BlackBoxTesting\\MeterApiBlackBoxTests.cs",
               "RelativeToolTip": "Session3_BlackBoxTesting\\MeterApiBlackBoxTests.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAcwOkAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAgwLUAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-01T09:32:34.011Z",
               "EditorCaption": ""

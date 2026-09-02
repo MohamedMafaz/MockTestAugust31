@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Session2_AdminDesktopApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f840e580a80d194b4e1ed2b80e22a38777ae5fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68990f8161886ef4149e6652407afdfb2ec1299f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Session2_AdminDesktopApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Session2_AdminDesktopApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

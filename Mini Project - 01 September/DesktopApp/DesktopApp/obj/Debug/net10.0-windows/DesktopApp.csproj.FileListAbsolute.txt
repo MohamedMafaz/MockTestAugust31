@@ -1,0 +1,17 @@
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\bin\Debug\net10.0-windows\DesktopApp.exe
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\bin\Debug\net10.0-windows\DesktopApp.deps.json
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\bin\Debug\net10.0-windows\DesktopApp.runtimeconfig.json
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\bin\Debug\net10.0-windows\DesktopApp.dll
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\bin\Debug\net10.0-windows\DesktopApp.pdb
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\obj\Debug\net10.0-windows\DesktopApp.Form1.resources
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\obj\Debug\net10.0-windows\DesktopApp.csproj.GenerateResource.cache
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\obj\Debug\net10.0-windows\DesktopApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\obj\Debug\net10.0-windows\DesktopApp.AssemblyInfoInputs.cache
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\obj\Debug\net10.0-windows\DesktopApp.AssemblyInfo.cs
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\obj\Debug\net10.0-windows\DesktopApp.csproj.CoreCompileInputs.cache
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\obj\Debug\net10.0-windows\DesktopApp.sourcelink.json
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\obj\Debug\net10.0-windows\DesktopApp.dll
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\obj\Debug\net10.0-windows\refint\DesktopApp.dll
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\obj\Debug\net10.0-windows\DesktopApp.pdb
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\obj\Debug\net10.0-windows\DesktopApp.genruntimeconfig.cache
+C:\Users\prmaf\Desktop\31 Mock Test\Mini Project - 01 September\DesktopApp\DesktopApp\obj\Debug\net10.0-windows\ref\DesktopApp.dll

@@ -1,0 +1,33 @@
+POST
+/api/login
+
+
+- get jwt token
+
+GET
+/api/dashboard
+
+- Get the data for dashboard
+
+GET
+/api/meters
+
+- Get Meters for that user
+
+GET
+/api/logData
+
+
+- Get Log Data with filtertig (query parameters)
+
+
+GET
+/api/incidents
+
+- Get Incident Types
+
+
+POST
+/api/repoprt
+
+- Create Report

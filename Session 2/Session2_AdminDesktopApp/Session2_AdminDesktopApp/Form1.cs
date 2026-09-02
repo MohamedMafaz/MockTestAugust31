@@ -56,7 +56,7 @@ namespace Session2_AdminDesktopApp
         private void LoadTheData()
         {
             var result = db.EnergyMeters.Include(x=>x.Facility).Include(x=>x.ConsumptionLogs).AsEnumerable()
-                .Where(x => string.IsNullOrEmpty(textBox1.Text) || x.FacilityId.ToString().Contains(textBox1.Text) || x.Facility.FacilityName.ToLower().Contains(textBox1.Text.ToLower()) || x.LocationZone.ToLower().Contains(textBox1.Text.ToLower())).Select(x => new
+                .Where(x => string.IsNullOrEmpty(textBox1.Text) || x.MeterId.ToString().Contains(textBox1.Text) || x.Facility.FacilityName.ToLower().Contains(textBox1.Text.ToLower()) || x.LocationZone.ToLower().Contains(textBox1.Text.ToLower())).Select(x => new
             {
                 x.MeterId,
                 x.Facility.FacilityName,

@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BBD1E1CC-E00D-4156-A56D-3F60AD672CAD}|API\\API.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 3\\api\\api\\models\\consumptionlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBD1E1CC-E00D-4156-A56D-3F60AD672CAD}|API\\API.csproj|solutionrelative:api\\models\\consumptionlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 3\\api\\api\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBD1E1CC-E00D-4156-A56D-3F60AD672CAD}|API\\API.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 3\\api\\api\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBD1E1CC-E00D-4156-A56D-3F60AD672CAD}|API\\API.csproj|solutionrelative:api\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 3\\api\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBD1E1CC-E00D-4156-A56D-3F60AD672CAD}|API\\API.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 3\\api\\api\\models\\energymeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBD1E1CC-E00D-4156-A56D-3F60AD672CAD}|API\\API.csproj|solutionrelative:api\\models\\energymeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 3\\api\\api\\models\\consumptionlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\consumptionlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Models\\EnergyContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API\\Models\\EnergyContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 3\\api\\api\\models\\energymeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\energymeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBD1E1CC-E00D-4156-A56D-3F60AD672CAD}|API\\API.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 3\\api\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBD1E1CC-E00D-4156-A56D-3F60AD672CAD}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 3\\api\\api\\models\\energycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\energycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +30,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ConsumptionLog.cs",
               "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Models\\ConsumptionLog.cs",
               "RelativeDocumentMoniker": "API\\Models\\ConsumptionLog.cs",
               "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Models\\ConsumptionLog.cs",
               "RelativeToolTip": "API\\Models\\ConsumptionLog.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA5wBYAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wBYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-01T09:15:44.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-01T09:15:44.535Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EnergyMeter.cs",
               "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Models\\EnergyMeter.cs",
               "RelativeDocumentMoniker": "API\\Models\\EnergyMeter.cs",
@@ -55,25 +54,24 @@
               "RelativeToolTip": "API\\Models\\EnergyMeter.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAA7wBsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-01T08:21:55.419Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-01T08:21:55.419Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ValuesController.cs",
               "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Controllers\\ValuesController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\ValuesController.cs",
               "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Controllers\\ValuesController.cs",
               "RelativeToolTip": "API\\Controllers\\ValuesController.cs",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAiwLgAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAE0AAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-01T08:09:07.235Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "EnergyContext.cs",
               "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Models\\EnergyContext.cs",
               "RelativeDocumentMoniker": "API\\Models\\EnergyContext.cs",
@@ -81,21 +79,19 @@
               "RelativeToolTip": "API\\Models\\EnergyContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-01T08:08:51.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-01T08:08:51.502Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Program.cs",
               "RelativeDocumentMoniker": "API\\Program.cs",
               "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Program.cs",
               "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACcAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-01T08:04:45.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-01T08:04:45.996Z"
             }
           ]
         }

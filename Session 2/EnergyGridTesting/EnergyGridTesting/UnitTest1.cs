@@ -8,8 +8,6 @@ namespace EnergyGridTesting
         [TestCase("1002", 0,0, 0)]
         [TestCase("", 0, 0, 0)]
         [TestCase(null, 0, 0, 0)]
-
-
         public void TestingHappyPath(string? id, decimal voltage, decimal current, decimal thresholdLimit)
         {
             var meter = new MeterReading
