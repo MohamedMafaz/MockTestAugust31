@@ -8,6 +8,7 @@ using System.Diagnostics.Metrics;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Text.Json;
 
 namespace API.Controllers
 {
@@ -20,7 +21,58 @@ namespace API.Controllers
 
         public static List<(string, int)> invalid = new List<(string, int)>();
 
+
+
+        public static class ApiDoc
+        {
+            public static void Write(HttpContext c, object? req, object? res, int code)
+            {
+                var r = c.Request;
+
+                var route = c.GetEndpoint()?
+                    .Metadata
+                    .GetMetadata<RouteEndpoint>()?
+                    .RoutePattern
+                    .RawText ?? r.Path;
+
+                string Obj(object? x) => x == null ? "N/A" :
+                    JsonSerializer.Serialize(
+                        x,
+                        new JsonSerializerOptions { WriteIndented = true }
+                    ).Replace("\n", "\n    ");
+
+                using var w = new StreamWriter("api-documentation.txt", true);
+
+                w.WriteLine($"""
+        {r.Method} {route}
+
+        Path Parameters:
+            {(c.Request.RouteValues.Count == 0 ? "N/A" :
+                        string.Join("\n    ",
+                            c.Request.RouteValues.Select(x => $"{x.Key}: {x.Value}")))}
+
+        Query Parameters:
+            {(r.Query.Count == 0 ? "N/A" :
+                        string.Join("\n    ",
+                            r.Query.Select(x => $"{x.Key}: {x.Value}")))}
+
+        Request Body:
+            {Obj(req)}
+
+        Response:
+            {Obj(res)}
+
+        Status Code:
+            {code}
+
+        ================================
+
+        """);
+            }
+        }
+
         public class LoginRequest
+
         {
             public string username { get; set; }
 
@@ -37,10 +89,17 @@ namespace API.Controllers
                 .FirstOrDefault(x => x.Username == request.username);
 
             if (user == null)
+            {
+                ApiDoc.Write(HttpContext, request, null, 401);
                 return Unauthorized();
+            }
+                
 
             if (!(bool)user.IsActive)
+            {
+                ApiDoc.Write(HttpContext, request, null, 401);
                 return Unauthorized();
+            }
 
             if (user.Password != request.password)
             {
@@ -62,6 +121,9 @@ namespace API.Controllers
                     }
                 }
 
+                ApiDoc.Write(HttpContext, request, null, 401);
+
+
                 return Unauthorized();
             }
 
@@ -82,7 +144,8 @@ namespace API.Controllers
                 )
             );
             invalid.RemoveAll(x => x.Item1 == request.username);
- 
+            ApiDoc.Write(HttpContext, request, token, 200);
+
             return Ok(token);
         }
 

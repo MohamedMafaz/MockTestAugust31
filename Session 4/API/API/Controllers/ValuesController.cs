@@ -51,6 +51,7 @@ namespace API.Controllers
 
             return Ok(new
             {
+                userid = user.UserId,
                 Name = user.FirstName + " " + user.LastName,
                 token
             });
@@ -75,13 +76,25 @@ namespace API.Controllers
 
             var netsolarexpoerted = db.EnergyLogs.Include(x=>x.SmartMeter).ThenInclude(x=>x.User).AsEnumerable()
                 .Where(x => x.SmartMeter.User.Email == email && x.TransactionTypeId == 2).Sum(x => x.UnitsKwh);
+            var now = DateTime.Now;
+            var yesterday = now.AddHours(-24);
 
-            var usageoverview = db.EnergyLogs.Include(x=>x.SmartMeter).ThenInclude(x=>x.User).AsEnumerable()
-                .Where(x => x.Timestamp <= DateTime.Now && x.Timestamp >= DateTime.Now.AddHours(-24) && x.SmartMeter.User.Email == email).GroupBy(x => new { mal = x.Timestamp.ToString("HH") }).Select(x => new
-            {
-                x.Key,
-                Total = x.Sum(a => a.UnitsKwh)
-            });
+            var usageoverview = db.EnergyLogs.Include(x=>x.SmartMeter)
+                .Where(x =>
+                    x.Timestamp >= yesterday &&
+                    x.Timestamp <= now &&
+                    x.SmartMeter.UserId == user.UserId
+                )
+                .AsEnumerable()
+                .GroupBy(x => x.Timestamp.Hour)
+                .Select(x => new
+                {
+                    Hour = x.Key.ToString(),
+                    Total = x.Sum(a => a.UnitsKwh)
+                })
+                .OrderBy(x => int.Parse(x.Hour))
+                .ToList();
+
 
             return Ok(new
             {
@@ -143,11 +156,11 @@ namespace API.Controllers
 
                             : dateRange == "This Week"
                                 ? DateOnly.FromDateTime(x.Timestamp) <= today
-                                  && DateOnly.FromDateTime(x.Timestamp) >= today.AddDays(-7)
+                                  && DateOnly.FromDateTime(x.Timestamp) >= today.AddDays(-6)
 
                             : dateRange == "Last 30 Days"
                                 ? DateOnly.FromDateTime(x.Timestamp) <= today
-                                  && DateOnly.FromDateTime(x.Timestamp) >= today.AddDays(-30)
+                                  && DateOnly.FromDateTime(x.Timestamp) >= today.AddDays(-29)
 
                             : (
                                 startDate.HasValue
@@ -213,13 +226,54 @@ namespace API.Controllers
         }
 
 
-        [HttpPost("repoprt")]
-        public IActionResult Report([FromBody] IncidentReport report)
+        [HttpPost("incidents/upload")]
+        public IActionResult Report(
+     [FromForm] int userId,
+     [FromForm] int? smartMeterId,
+     [FromForm] string category,
+     [FromForm] string description,
+     [FromForm] decimal latitude,
+     [FromForm] decimal longitude,
+     [FromForm] IFormFile image)
         {
-            db.IncidentReports.Add(report);
-            db.SaveChanges();
+            try
+            {
+                var fileName = Guid.NewGuid() + Path.GetExtension(image.FileName);
+                var folder = Path.Combine("wwwroot", "images");
 
-            return Ok();
+                Directory.CreateDirectory(folder);
+
+                using var stream = new FileStream(
+                    Path.Combine(folder, fileName),
+                    FileMode.Create);
+
+                image.CopyTo(stream);
+
+                var report = new IncidentReport
+                {
+                    UserId = userId,
+                    SmartMeterId = smartMeterId,
+                    Category = category,
+                    Description = description,
+                    PhotoUrl = fileName,
+                    Latitude = latitude,
+                    Longitude = longitude,
+                    Status = "Submitted",
+                    CreatedAt = DateTime.Now
+                };
+
+                db.IncidentReports.Add(report);
+                db.SaveChanges();
+
+                return StatusCode(201, new
+                {
+                    ticket = $"INC-{report.IncidentId:D3}"
+                });
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

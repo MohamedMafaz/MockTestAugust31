@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dashboard">仪表盘</string>
+    <string name="usage_logs">用电记录</string>
+    <string name="report">报告</string>
+    <string name="smart_meters">智能电表</string>
+
+    <string name="hello">你好</string>
+    <string name="account_id">账户 ID</string>
+    <string name="grid_online">电网在线</string>
+
+    <string name="smart_meter">智能电表</string>
+    <string name="incident_type">事件类型</string>
+    <string name="remove">删除</string>
+    <string name="gallery">相册</string>
+    <string name="camera">相机</string>
+    <string name="description">描述</string>
+    <string name="submit_incident_report">提交事件报告</string>
+
+    <string name="all_fields_required">所有字段都是必填项</string>
+    <string name="description_max">描述最多只能包含 300 个字符</string>
+    <string name="unable_get_location">无法获取位置</string>
+    <string name="saved_successfully">保存成功</string>
+
+    <string name="today">今天</string>
+    <string name="this_week">本周</string>
+    <string name="last_30_days">过去 30 天</string>
+    <string name="custom_range">自定义范围</string>
+
+    <string name="sort">排序</string>
+    <string name="date_newest_first">日期（最新优先）</string>
+    <string name="date_oldest_first">日期（最旧优先）</string>
+    <string name="usage_highest_first">用电量（最高优先）</string>
+    <string name="usage_lowest_first">用电量（最低优先）</string>
+
+    <string name="peak_hours">高峰时段</string>
+    <string name="peak_off_hours">非高峰时段</string>
+    <string name="filters">筛选</string>
+    <string name="reset_filter">重置筛选</string>
+    <string name="apply">应用</string>
+    <string name="no_consumption_logs">没有找到符合所选条件的用电记录。</string>
+    <string name="is_peak">是否高峰:</string>
+
+    <string name="peak_usage">峰值用电量：%1$s</string>
+    <string name="todays_usage">今日用电量</string>
+    <string name="estimated_monthly_bill">预计每月账单</string>
+    <string name="net_solar_exported">太阳能净输出</string>
+    <string name="usage_overview_chart">用电概览图</string>
+    <string name="usage_kwh">用电量（kWh）</string>
+    <string name="time">时间</string>
+
+    <string name="ok">确定</string>
+
+    <string name="all">全部</string>
+
+</resources>

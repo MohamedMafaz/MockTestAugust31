@@ -14,7 +14,7 @@ import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 
 object Api {
-    public var baseUrl = "http://192.168.50.65:5036/"
+    public var baseUrl = "http://10.40.0.84:5036/"
     public var client = OkHttpClient()
     public var gson = Gson()
 
@@ -45,7 +45,7 @@ object Api {
 
         var output = response.body?.string()
 
-        if(T::class == Unit::class || T::class == String::class){
+        if(T::class == Unit::class || T::class == String::class || T::class == Int::class){
             return@withContext response.code to output as T
 
         }

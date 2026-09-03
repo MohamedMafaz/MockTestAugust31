@@ -1,4 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Session4_AndroidApp</string>
-    <string name="title_activity_new_main">NewMainActivity</string>
+
+    <!-- Navigation -->
+    <string name="dashboard">Dashboard</string>
+    <string name="usage_logs">Usage Logs</string>
+    <string name="report">Report</string>
+    <string name="smart_meters">Smart Meters</string>
+
+    <!-- Top Bar -->
+    <string name="hello">Hello,</string>
+    <string name="account_id">Account Id</string>
+    <string name="grid_online">Grid Online</string>
+
+    <!-- Incident Report -->
+    <string name="smart_meter">Smart Meter</string>
+    <string name="incident_type">Incident Type</string>
+    <string name="remove">Remove</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="description">Description</string>
+    <string name="submit_incident_report">Submit Incident Report</string>
+
+    <!-- Messages -->
+    <string name="all_fields_required">All fields are required</string>
+    <string name="description_max">Description should be 300 characters maximum</string>
+    <string name="unable_get_location">Unable to get location</string>
+    <string name="saved_successfully">Saved Successfully</string>
+
+    <!-- Usage Logs -->
+    <string name="today">Today</string>
+    <string name="this_week">This Week</string>
+    <string name="last_30_days">Last 30 Days</string>
+    <string name="custom_range">Custom Range</string>
+
+    <string name="sort">Sort</string>
+    <string name="date_newest_first">Date (Newest First)</string>
+    <string name="date_oldest_first">Date (Oldest First)</string>
+    <string name="usage_highest_first">Usage (Highest First)</string>
+    <string name="usage_lowest_first">Usage (Lowest First)</string>
+
+    <string name="peak_hours">Peak Hours</string>
+    <string name="peak_off_hours">Peak-off Hours</string>
+    <string name="filters">Filters</string>
+    <string name="reset_filter">Reset Filter</string>
+    <string name="apply">Apply</string>
+    <string name="no_consumption_logs">No consumption logs found for the selected criteria.</string>
+    <string name="is_peak">Is Peak: </string>
+
+    <!-- Dashboard -->
+    <string name="peak_usage">Peak Usage: %1$s</string>
+    <string name="todays_usage">Todays Usage</string>
+    <string name="estimated_monthly_bill">Est. Monthly Bill</string>
+    <string name="net_solar_exported">Net Solar Exported</string>
+    <string name="usage_overview_chart">Usage Overview Chart</string>
+    <string name="usage_kwh">Usage (kWh)</string>
+    <string name="time">Time</string>
+
+    <!-- Date Picker -->
+    <string name="ok">OK</string>
+
+    <!-- General -->
+    <string name="all">All</string>
+
 </resources>

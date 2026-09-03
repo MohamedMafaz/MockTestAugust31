@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 3\\api\\api\\api-documentation.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\api-documentation.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 3\\api\\api\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 3\\api\\api\\models\\energymeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\energymeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 3\\api\\api\\models\\energycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\models\\energycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "api-documentation.txt",
+              "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\api-documentation.txt",
+              "RelativeDocumentMoniker": "API\\api-documentation.txt",
+              "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\api-documentation.txt",
+              "RelativeToolTip": "API\\api-documentation.txt",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-09-03T05:12:22.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ConsumptionLog.cs",
               "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Models\\ConsumptionLog.cs",
               "RelativeDocumentMoniker": "API\\Models\\ConsumptionLog.cs",
@@ -46,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "EnergyMeter.cs",
               "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Models\\EnergyMeter.cs",
               "RelativeDocumentMoniker": "API\\Models\\EnergyMeter.cs",
@@ -58,32 +71,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ValuesController.cs",
               "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Controllers\\ValuesController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\ValuesController.cs",
               "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Controllers\\ValuesController.cs",
               "RelativeToolTip": "API\\Controllers\\ValuesController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAkwFEAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAswJIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-01T08:09:07.235Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EnergyContext.cs",
-              "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Models\\EnergyContext.cs",
-              "RelativeDocumentMoniker": "API\\Models\\EnergyContext.cs",
-              "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Models\\EnergyContext.cs",
-              "RelativeToolTip": "API\\Models\\EnergyContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-01T08:08:51.502Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 3\\API\\API\\Program.cs",
               "RelativeDocumentMoniker": "API\\Program.cs",
@@ -91,8 +92,7 @@
               "RelativeToolTip": "API\\Program.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAQwDAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-01T08:04:45.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-01T08:04:45.996Z"
             }
           ]
         }
