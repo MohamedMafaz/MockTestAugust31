@@ -1,0 +1,186 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 6\\winformsapp1\\winformsapp1\\meterdeletewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\meterdeletewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 6\\winformsapp1\\winformsapp1\\consumptionlogviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\consumptionlogviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 6\\winformsapp1\\winformsapp1\\consumptionlogviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\consumptionlogviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 6\\winformsapp1\\winformsapp1\\consumptionlogviewer.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\consumptionlogviewer.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 6\\winformsapp1\\winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 6\\winformsapp1\\winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 6\\winformsapp1\\winformsapp1\\appdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\appdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 6\\winformsapp1\\winformsapp1\\meterdeletewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\meterdeletewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 6\\winformsapp1\\winformsapp1\\addmeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\addmeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\prmaf\\desktop\\31 mock test\\session 6\\winformsapp1\\winformsapp1\\addmeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2E69DB5-B07A-4A9A-9B81-DAB44FC64DB1}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\addmeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConsumptionLogViewer.cs",
+              "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\ConsumptionLogViewer.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\ConsumptionLogViewer.cs",
+              "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\ConsumptionLogViewer.cs",
+              "RelativeToolTip": "WinFormsApp1\\ConsumptionLogViewer.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAjwHMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-04T10:41:40.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConsumptionLogViewer.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\ConsumptionLogViewer.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\ConsumptionLogViewer.cs",
+              "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\ConsumptionLogViewer.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\ConsumptionLogViewer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-04T10:29:15.235Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\Form1.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Form1.cs",
+              "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\Form1.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-04T08:36:21.357Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MeterDeleteWindow.cs",
+              "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\MeterDeleteWindow.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\MeterDeleteWindow.cs",
+              "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\MeterDeleteWindow.cs",
+              "RelativeToolTip": "WinFormsApp1\\MeterDeleteWindow.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAtwB4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-04T10:15:52.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConsumptionLogViewer.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\ConsumptionLogViewer.Designer.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\ConsumptionLogViewer.Designer.cs",
+              "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\ConsumptionLogViewer.Designer.cs",
+              "RelativeToolTip": "WinFormsApp1\\ConsumptionLogViewer.Designer.cs",
+              "ViewState": "AgIAAKEAAAAAAAAAAADwv7wAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-04T10:47:57.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\Form1.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Form1.cs",
+              "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\Form1.cs",
+              "RelativeToolTip": "WinFormsApp1\\Form1.cs",
+              "ViewState": "AgIAALMAAAAAAAAAAAAuwMMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-04T09:10:57.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppData.cs",
+              "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\AppData.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\AppData.cs",
+              "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\AppData.cs",
+              "RelativeToolTip": "WinFormsApp1\\AppData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-04T09:47:35.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MeterDeleteWindow.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\MeterDeleteWindow.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\MeterDeleteWindow.cs",
+              "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\MeterDeleteWindow.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\MeterDeleteWindow.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-04T10:15:00.904Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AddMeter.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\AddMeter.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\AddMeter.cs",
+              "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\AddMeter.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\AddMeter.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-04T09:36:34.895Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddMeter.cs",
+              "DocumentMoniker": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\AddMeter.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\AddMeter.cs",
+              "ToolTip": "C:\\Users\\prmaf\\Desktop\\31 Mock Test\\Session 6\\WinFormsApp1\\WinFormsApp1\\AddMeter.cs",
+              "RelativeToolTip": "WinFormsApp1\\AddMeter.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAADwv+cAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-04T09:26:50.805Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

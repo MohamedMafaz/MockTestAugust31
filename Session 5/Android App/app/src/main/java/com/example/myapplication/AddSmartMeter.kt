@@ -105,7 +105,8 @@ private fun AddScreen(){
                 serialNumber = it
             }, label = {
                 Text("Meter Serial Number")
-            })
+            }, modifier = Modifier.fillMaxWidth())
+            Spacer(Modifier.height(10.dp))
 
             MyDropdown(
                 value = selectedCustoemr!!.name,
@@ -122,6 +123,9 @@ private fun AddScreen(){
                 }
             )
 
+            Spacer(Modifier.height(10.dp))
+
+
             MyDropdown(
                 value = selectedTranms!!.name,
                 label = "Transformer",
@@ -137,6 +141,10 @@ private fun AddScreen(){
                 }
             )
 
+            Spacer(Modifier.height(10.dp))
+
+
+
             TextField(voltageCapacity.toString(),{
                 if(it.all { it.isDigit() } && it.isNotBlank()){
                     voltageCapacity = it.toInt()
@@ -144,6 +152,9 @@ private fun AddScreen(){
             }, label = {
                 Text("Max Voltage Capacity")
             }, modifier = Modifier.fillMaxWidth())
+
+
+            Spacer(Modifier.height(10.dp))
 
 
             TextField(dailyUsage.toString(),{

@@ -12,6 +12,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -49,6 +50,7 @@ import com.example.myapplication.ui.theme.MyApplicationTheme
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.io.File
 import java.net.URL
 
 class FieldIncidents : ComponentActivity() {
@@ -87,6 +89,7 @@ private fun ViewFieldIncidents(){
             .fillMaxSize()
             .padding(30.dp)
     ) {
+        Spacer(Modifier.height(50.dp))
         TextField(searchText, { searchText = it }, label = {
             Text("Search Text")
         }, modifier = Modifier.fillMaxWidth())
@@ -149,8 +152,16 @@ private fun ViewFieldIncidents(){
 
                         scope.launch {
                             withContext(Dispatchers.IO){
-                                image = BitmapFactory.decodeByteArray(URL(item.photoUrl).readBytes(),0, URL(item.photoUrl).readBytes().size).asImageBitmap()
-                            }
+
+
+                                if(File(context.filesDir, item.photoUrl).exists()){
+                                    image = BitmapFactory.decodeFile(File(context.filesDir, item.photoUrl).absolutePath).asImageBitmap()
+                                }
+                                else {
+
+                                    image = BitmapFactory.decodeByteArray(URL(item.photoUrl).readBytes(),0, URL(
+                                        item.photoUrl).readBytes().size).asImageBitmap()
+                                }                            }
                         }
 
                         if(image!=null){

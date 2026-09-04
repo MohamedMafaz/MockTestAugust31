@@ -10,8 +10,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -40,7 +42,9 @@ import androidx.compose.runtime.referentialEqualityPolicy
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.AbsoluteAlignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
@@ -78,8 +82,12 @@ private fun FirstScreen(){
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(30.dp)
+            .padding(30.dp),
+        horizontalAlignment = AbsoluteAlignment.Right
     ) {
+
+        Spacer(Modifier.height(50.dp))
+
         TextField(searchText,{searchText = it}, label = {
             Text("Search Text")
         }, modifier = Modifier.fillMaxWidth())
@@ -91,11 +99,28 @@ private fun FirstScreen(){
                 FilterChip(
                     selected = selectedFilterItems.contains(it),
                     onClick = {
-                        if(selectedFilterItems.contains(it)) selectedFilterItems.remove(it)
-                        else selectedFilterItems.add(it)
+                        if (it == "All") {
+                            if (selectedFilterItems.contains("All")) {
+                                selectedFilterItems.clear()
+                            } else {
+                                selectedFilterItems.clear()
+                                selectedFilterItems.addAll(filterItems)
+                            }
+                        } else {
+                            if (selectedFilterItems.contains(it)) {
+                                selectedFilterItems.remove(it)
+                                selectedFilterItems.remove("All")
+                            } else {
+                                selectedFilterItems.add(it)
 
-                        if(filterItems.filter { it != "All" }.intersect(selectedFilterItems.filter { it!="All" }).any()){
-                            selectedFilterItems.add("All")
+                                val allSelected = filterItems
+                                    .filter { it != "All" }
+                                    .all { selectedFilterItems.contains(it) }
+
+                                if (allSelected) {
+                                    selectedFilterItems.add("All")
+                                }
+                            }
                         }
                     },
                     label = {
@@ -118,12 +143,12 @@ private fun FirstScreen(){
                             it.customer.lowercase().contains(search)
                 }
                 .filter {
-                    if (selectedFilterItems.contains("All")) {
-                        true
-                    } else {
+//                    if (selectedFilterItems.contains("All")) {
+//                        true
+//                    } else {
                         (!selectedFilterItems.contains("Active Only") || it.isActive) &&
                                 (!selectedFilterItems.contains("Industrial Only") || it.isIndustrial)
-                    }
+//                    }
                 }
 
             items(filteredItems){ item->
@@ -190,14 +215,16 @@ private fun FirstScreen(){
 
         Button(onClick = {
                 context.startActivity(Intent(context, FieldIncidents::class.java))
-        }) {
+        }, modifier = Modifier.fillMaxWidth()) {
             Text("View Field Incidents")
         }
 
+        Spacer(Modifier.height(15.dp))
         FloatingActionButton(onClick = {
             DataStore.selectedMeter = null
             context.startActivity(Intent(context, AddSmartMeter::class.java))
-        }) {
+        }
+            ) {
             Icon(Icons.Default.Add,"")
         }
     }

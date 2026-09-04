@@ -15,12 +15,14 @@ import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberWideNavigationRailState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -31,13 +33,17 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Canvas
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.Paint
+import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
@@ -67,11 +73,20 @@ private fun MoreDetailsScreen(){
     var scope = rememberCoroutineScope()
     var imageBitmap by remember { mutableStateOf<ImageBitmap?>(null) }
     var scribbles = remember { mutableStateListOf<Offset>() }
+    val density = LocalDensity.current
+    val canvasSizePx = with(density) { 300.dp.toPx() }.toInt()
 
     LaunchedEffect(Unit) {
         withContext(Dispatchers.IO){
-            imageBitmap = BitmapFactory.decodeByteArray(URL(DataStore.selectedIncidents!!.photoUrl).readBytes(),0, URL(
-                DataStore.selectedIncidents!!.photoUrl).readBytes().size).asImageBitmap()
+            if(File(context.filesDir, DataStore.selectedIncidents!!.photoUrl).exists()){
+                imageBitmap = BitmapFactory.decodeFile(File(context.filesDir, DataStore.selectedIncidents!!.photoUrl).absolutePath).asImageBitmap()
+            }
+            else {
+
+                imageBitmap = BitmapFactory.decodeByteArray(URL(DataStore.selectedIncidents!!.photoUrl).readBytes(),0, URL(
+                    DataStore.selectedIncidents!!.photoUrl).readBytes().size).asImageBitmap()
+            }
+
         }
     }
 
@@ -121,37 +136,81 @@ private fun MoreDetailsScreen(){
             }
 
 
-            Button(onClick = {
-                var canvas = android.graphics.Canvas(BitmapFactory.decodeByteArray(URL(DataStore.selectedIncidents!!.photoUrl).readBytes(),0, URL(
-                    DataStore.selectedIncidents!!.photoUrl).readBytes().size))
+            Spacer(Modifier.height(30.dp))
 
-                for(i in 1 until scribbles.size){
-                    if(i % 2 == 0) continue
+            Button(
+                onClick = {
+                    scope.launch {
+                        val bitmap = Bitmap.createBitmap(
+                            canvasSizePx,
+                            canvasSizePx,
+                            Bitmap.Config.ARGB_8888
+                        )
 
-                    var firstitem = scribbles[i-1]
-                    var secondItem = scribbles[i]
+                        val canvas = android.graphics.Canvas(bitmap)
 
-                    var paint = android.graphics.Paint(
+                        val image = imageBitmap!!.asAndroidBitmap()
 
-                    )
+                        canvas.drawBitmap(
+                            image,
+                            null,
+                            android.graphics.Rect(0, 0, canvasSizePx, canvasSizePx),
+                            null
+                        )
 
-                    paint.color = Color.RED
-                    paint.strokeWidth = 10f
+                        val paint = android.graphics.Paint().apply {
+                            color = Color.RED
+                            strokeWidth = 10f
+                        }
 
-                    canvas.drawLine(firstitem.x, firstitem.y, secondItem.x, secondItem.y, paint)
+                        for (i in 1 until scribbles.size) {
+                            if (i % 2 == 0) continue
 
+                            canvas.drawLine(
+                                scribbles[i - 1].x,
+                                scribbles[i - 1].y,
+                                scribbles[i].x,
+                                scribbles[i].y,
+                                paint
+                            )
 
-                }
+                            canvas.drawCircle(
+                                scribbles[i].x,
+                                scribbles[i].y,
+                                20f,
+                                paint
+                            )
+                        }
 
+                        val filename = "IMG_${System.currentTimeMillis()}.jpg"
 
-                var file = File(context.filesDir, "IMG_${System.currentTimeMillis()}.jpeg")
+                        withContext(Dispatchers.IO) {
+                            File(context.filesDir, filename).outputStream().use {
+                                bitmap.compress(
+                                    Bitmap.CompressFormat.JPEG,
+                                    95,
+                                    it
+                                )
+                            }
+                        }
 
-                file.outputStream().use {
+                        val result = Api.api<String>(
+                            context,
+                            "api/updateImage?id=${DataStore.selectedIncidents!!.incidentId}&image=$filename",
+                            "PUT"
+                        )
 
-                }
+                        Toast.makeText(context, result.second!!, Toast.LENGTH_SHORT).show()
 
-
-            }) {
+                        if (result.first == 200) {
+                            context.startActivity(
+                                Intent(context, FieldIncidents::class.java)
+                            )
+                        }
+                    }
+                },
+                modifier = Modifier.width(300.dp)
+            ) {
                 Text("Save Annotated Image")
             }
 
@@ -164,7 +223,7 @@ private fun MoreDetailsScreen(){
                         context.startActivity(Intent(context, FieldIncidents::class.java))
                     }
                 }
-            }) {
+            }, modifier = Modifier.width(300.dp)) {
                 Text("Mark In-Review")
             }
 
@@ -178,16 +237,19 @@ private fun MoreDetailsScreen(){
                         context.startActivity(Intent(context, FieldIncidents::class.java))
                     }
                 }
-            }) {
+            }, modifier = Modifier.width(300.dp)) {
                 Text("Mark Resolved")
             }
 
             Button(onClick = {
                 scope.launch {
                     var result = Api.api<String>(context,"api/dispatch?id=${DataStore.selectedIncidents!!.incidentId}","POST")
-                    Toast.makeText(context, result.second!!, Toast.LENGTH_SHORT).show()
+
+                    if(result.first == 200){
+                        Toast.makeText(context, result.second!!, Toast.LENGTH_SHORT).show()
+                    }
                 }
-            }) {
+            }, modifier = Modifier.width(300.dp)) {
                 Text("Dispatch Technician")
             }
         }

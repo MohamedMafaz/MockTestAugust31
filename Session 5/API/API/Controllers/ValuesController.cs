@@ -38,7 +38,7 @@ namespace API.Controllers
                 var meter = db.SmartMeters.Include(x => x.IncidentReports).Include(x => x.Alerts).Include(x => x.EnergyLogs).Include(x => x.Invoices).Include(x => x.WorkOrders).ThenInclude(x => x.ComponentReplacementLogs).Include(x => x.MaintenanceRecords)
                .FirstOrDefault(x => x.MeterId == id);
 
-                if(meter != null)
+                if (meter != null)
                 {
                     if (meter.IncidentReports.Any())
                     {
@@ -96,9 +96,9 @@ namespace API.Controllers
                 }
 
                 return Ok("");
-                
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest("");
             }
@@ -114,11 +114,11 @@ namespace API.Controllers
 
                 return Ok("Created Successfully");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest(ex.InnerException);
             }
-        
+
         }
 
         [HttpPut("meters/{id}")]
@@ -131,7 +131,7 @@ namespace API.Controllers
 
                 return Ok("Updated Successfully");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
@@ -140,11 +140,11 @@ namespace API.Controllers
         [HttpGet("customers")]
         public IActionResult GetCustomer()
         {
-            return Ok(db.Users.Where(x => x.UserId == 4).Select(x => new { 
+            return Ok(db.Users.Where(x => x.RoleId == 4).Select(x => new {
                 Id = x.UserId,
                 Name = x.FirstName + " " + x.LastName
             }));
-            
+
         }
 
 
@@ -189,7 +189,7 @@ namespace API.Controllers
 
             var incident = db.IncidentReports.FirstOrDefault(x => x.IncidentId == id);
 
-            if(db.WorkOrders.Any(x=>x.Status != "Completed" && x.SmartMeterId == (int)incident.SmartMeterId))
+            if (db.WorkOrders.Any(x => x.Status != "Completed" && x.SmartMeterId == (int)incident.SmartMeterId))
             {
                 return BadRequest("Technician Dispatched Already");
             }
@@ -208,6 +208,17 @@ namespace API.Controllers
             db.SaveChanges();
 
             return Ok("Technician Dispatched Successfully");
+        }
+
+        [HttpPut("updateImage")]
+        public IActionResult UpdateImage(int id, string image)
+        {
+            var incident = db.IncidentReports.FirstOrDefault(x => x.IncidentId == id);
+
+            incident.PhotoUrl = image;
+            db.SaveChanges();
+
+            return Ok("Image Updated Successfully");
         }
     }
 }

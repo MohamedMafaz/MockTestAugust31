@@ -1,0 +1,289 @@
+API Documentation:
+=============================
+
+GET
+/api/meters
+
+Parameters
+N/A
+
+Responses
+200 OK
+
+[
+  {
+    "meterId": 1020,
+    "meterSerialNumber": "mafaz",
+    "customerName": "David Chen",
+    "maxVoltageCapacity": 0,
+    "dailyUsageLimitKw": 50,
+    "isActive": true,
+    "description": null,
+    "anyLogs": true
+  }
+]
+
+=============================
+
+POST
+/api/meters
+
+Parameters
+N/A
+
+Request body
+
+application/json
+
+Schema
+{
+  "meterId": 0,
+  "meterSerialNumber": "string",
+  "transformerId": 0,
+  "userId": 0,
+  "assignedTechnicianId": 0,
+  "tariffPlanId": 0,
+  "latitude": 0,
+  "longitude": 0,
+  "maxVoltageCapacity": 0,
+  "dailyUsageLimitKw": 0,
+  "installationDate": "2026-09-04",
+  "isActive": true,
+  "isIndustrial": true,
+  "description": "string"
+}
+
+Responses
+200	
+OK
+
+Created Successfully
+
+============================
+
+GET
+/api/transformers
+
+Parameters
+N/A
+
+Responses
+Code	200	OK
+
+[
+  {
+    "id": 1,
+    "name": "Transformer 1"
+  },
+]
+
+===============================
+
+GET
+/api/customers
+
+Parameters
+n/a
+
+Responses
+Code 200	OK
+
+[
+  {
+    "id": 1,
+    "name": "Transformer 1"
+  },
+]
+
+===============================
+
+GET
+/api/technicians
+
+Parameters
+N/A
+
+Responses
+Code 200	OK
+
+
+[
+  {
+    "id": 1,
+    "name": "Transformer 1"
+  },
+]
+
+==================================
+
+GET
+/api/plans
+
+Parameters
+N/A
+
+Responses
+Code 200 OK
+
+[
+  {
+    "id": 1,
+    "name": "Transformer 1"
+  },
+]
+
+
+=====================================
+
+PUT
+/api/meters/{id}
+
+Parameters
+id *
+integer($int32)
+(path)
+id
+
+
+Request body
+
+application/json
+Schema
+{
+  "meterId": 0,
+  "meterSerialNumber": "string",
+  "transformerId": 0,
+  "userId": 0,
+  "assignedTechnicianId": 0,
+  "tariffPlanId": 0,
+  "latitude": 0,
+  "longitude": 0,
+  "maxVoltageCapacity": 0,
+  "dailyUsageLimitKw": 0,
+  "installationDate": "2026-09-04",
+  "isActive": true,
+  "isIndustrial": true,
+  "description": "string"
+}
+
+
+Responses
+Code 200 OK
+
+Updated Successfully
+
+=========================================
+
+DELETE
+/api/meters/{id}
+
+Parameters
+
+id *
+integer($int32)
+(path)
+id
+
+
+Responses
+Code 200 OK
+
+Deleted Successfully
+
+=========================================
+
+GET
+/api/singleMeter
+
+Parameters
+
+id
+integer($int32)
+(query)
+id
+
+Responses
+Code 200 OK
+{
+  "meterId": 1020,
+  "meterSerialNumber": "mafaz",
+  "transformerId": 1,
+  "userId": 4,
+  "assignedTechnicianId": 1,
+  "tariffPlanId": 1,
+  "latitude": 0,
+  "longitude": 0,
+  "maxVoltageCapacity": 0,
+  "dailyUsageLimitKw": 50,
+  "installationDate": "0001-01-01",
+  "isActive": true,
+  "isIndustrial": false,
+  "description": null
+}
+
+===========================================
+
+
+GET
+/api/energyLogs
+
+Parameters
+
+id
+integer($int32)
+(query)
+id
+
+
+Responses
+Code 200 OK
+[
+  {
+    "timestamp": "2026-09-04T15:51:32.847",
+    "unitsKwh": 100,
+    "voltage": 100,
+    "currentAmps": 100
+  }
+]
+
+==============================================
+
+GET
+/api/logspgae
+
+Parameters
+
+customerId
+integer($int32)
+(query)
+
+string($date)
+(query)
+startDate
+
+string($date)
+(query)
+endDate
+
+
+Responses
+Code 200 OK
+
+{
+    "totalEnergyConsumed": 100,
+    "totalEnergyCost": 18,
+    "result": [
+        {
+            "logId": 16,
+            "meterSerialNumber": "mafaz",
+            "timestamp": "2026-09-04T15:51:32.847",
+            "unitsKwh": 100,
+            "voltage": 100,
+            "currentAmps": 100,
+            "powerKw": 100,
+            "isPeakHour": true,
+            "peakHourPricePerUnit": 0.18,
+            "pricePerUnit": 0.12
+        }
+    ]
+}

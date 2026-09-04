@@ -1,4 +1,8 @@
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("GridContext") ?? throw new InvalidOperationException("Connection string 'GridContext' not found.");
+
+//builder.Services.AddDbContext<GridContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 
